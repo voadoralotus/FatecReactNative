@@ -1,0 +1,47 @@
+import React, { Component } from 'react';
+import { View, Text, Image, StyleSheet} from 'react-native';
+import Constants from 'expo-constants'; 
+
+class App extends Component{
+  render(){
+
+    let nome = 'Pipokinha';
+    let img = 'https://portalpopline.com.br/wp-content/uploads/2023/01/mc-pipokinha.png';
+    return(
+      
+          <View style={styles.container}>
+        
+      
+        <Text style={{color:'Gray', fontSize: 40, marginLeft:80, marginTop: 70}}>Meu Perfil</Text>
+        <Image
+          source={{ uri: img }}
+          style={{ width: 200, height: 200,  marginLeft: 80}}
+        />
+        <Text style={{color:'#FF8CF4', fontSize:30, marginLeft: 20 }}>Dados Pessoais:</Text>
+        <Text style={{color:'white', fontSize:20, marginLeft: 50 }}>- Nome: {nome}</Text>
+        <Text style={{color:'white', fontSize:20, marginLeft: 50 }}>- Telefone: 4002-8922</Text>
+        <Text style={{color:'white', fontSize:20, marginLeft: 50 }}>- Endereço: Do Rio </Text>
+
+        <Text style={{color:'#FF8CF4', fontSize:30, marginLeft: 20 }}>Formação:</Text>
+        <Text style={{color:'white', fontSize:20, marginLeft: 50 }}>- Musicista</Text>
+
+        <Text style={{color:'#FF8CF4', fontSize:30, marginLeft: 20 }}>Experiência:</Text>
+        <Text style={{color:'white', fontSize:20, marginLeft: 50 }}>- 2 Anos como MC</Text>
+
+        <Text style={{color:'#FF8CF4', fontSize:30, marginLeft: 20 }}>Projetos:</Text>
+        <Text style={{color:'white', fontSize:20, marginLeft: 50 }}>- Fundação Pipoquetes</Text>
+
+
+        
+      </View>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: '#3E4544',
+    height: 1500
+  }
+})
+export default App;
